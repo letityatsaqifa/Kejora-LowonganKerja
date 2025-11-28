@@ -1,0 +1,1947 @@
+:root {
+    --primary: #3C467B;
+    --secondary: #2B9BFF;
+    --light: #EFFDF5;
+    --dark: #6e7c82;
+    --primary2: #000000;
+    --white: #fafafa;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-color {
+    background-color: var(--white);
+}
+
+.cat-item {
+    color: var(--primary);
+}
+
+.cat-item:hover {
+    color: var(--primary2);
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: .5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        top: 100%;
+        margin-top: 0;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+.header-carousel .owl-carousel-item {
+    height: 85vh;
+    min-height: 500px;
+}
+
+.header-carousel .owl-carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    background: linear-gradient(to right, rgba(60, 70, 123, 0.9), rgba(60, 70, 123, 0.5)) !important;
+}
+.header-carousel .btn {
+    border-radius: 50px !important;
+    padding: 15px 40px !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.header-carousel .btn-primary:hover {
+    transform: translateY(-3px);
+    background-color: #fff !important;
+    color: var(--primary) !important;
+}
+
+.header-carousel h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.header-carousel .owl-nav {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .header-carousel h1 { font-size: 2.5rem; }
+    .header-carousel .owl-carousel-item { height: 600px; }
+}
+
+.header-carousel .owl-nav {
+    display: none !important;
+}
+
+#search-section {
+    position: relative;
+    z-index: 10;
+    background: transparent !important;
+    padding-bottom: 20px;
+    scroll-margin-top: 55px;
+}
+
+#search-section .container {
+    background-color: var(--primary);
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#search-section .form-control,
+#search-section .form-select,
+#search-section .input-group-text,
+#search-section .btn {
+    height: 55px;
+    font-size: 15px;
+    border: none;
+    border-radius: 0;
+}
+
+#search-section .input-group-text {
+    background-color: #fff;
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+    padding-left: 25px;
+    color: var(--primary);
+}
+
+#search-section .form-control,
+#search-section .form-select {
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+    padding-left: 10px;
+}
+
+/* Hilangkan outline biru pas diklik */
+#search-section .form-control:focus,
+#search-section .form-select:focus {
+    box-shadow: none;
+    background-color: #f8f9fa;
+}
+
+/* 6. Tombol Cari */
+#search-section .btn-secondary {
+    width: 100%;
+    /* Tombol jadi kapsul penuh */
+    border-radius: 50px !important;
+    font-weight: bold;
+    /* Pakai warna biru muda biar kontras */
+    background-color: var(--secondary) !important;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* Efek hover tombol cari */
+#search-section .btn-secondary:hover {
+    background-color: #fff !important;
+    color: var(--primary) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Fix kecil untuk jarak antar kolom di HP */
+#search-section .row.g-2 > div {
+    margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+    #search-section .row.g-2 > div {
+        margin-bottom: 0;
+    }
+}
+
+.rounded-start-pill {
+    border-top-left-radius: 50rem !important;
+    border-bottom-left-radius: 50rem !important;
+}
+.rounded-end-pill {
+    border-top-right-radius: 50rem !important;
+    border-bottom-right-radius: 50rem !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** About ***/
+.about-bg {
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -o-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+    background-size: 5px 5px;
+}
+
+
+/*** Category ***/
+/* --- 3. MODERN CATEGORY SECTION --- */
+
+/* --- MODERN TAB MENU (UNDERLINE STYLE) --- */
+
+/* 1. Reset Style Nav Pills (Matikan Background Biru Bawaan) */
+.nav-pills .nav-item a {
+    background-color: transparent !important; /* Hapus blok warna */
+    border: none !important;
+    border-radius: 0 !important; /* Hapus sudut bulat */
+    border-bottom: 3px solid transparent !important; /* Siapkan tempat buat garis */
+    color: #888 !important; /* Warna teks kalau gak aktif (Abu-abu) */
+    padding: 10px 20px !important; /* Spasi yang enak */
+    transition: all 0.3s ease; /* Animasi halus */
+    margin: 0 5px;
+}
+
+/* 2. Style Pas Menu AKTIF (Muncul Garis Bawah) */
+.nav-pills .nav-item a.active {
+    color: var(--primary) !important; /* Teks jadi Biru Tua */
+    border-bottom: 3px solid var(--primary) !important; /* GARIS BAWAH MUNCUL DISINI */
+    background-color: transparent !important; /* Tetap transparan */
+}
+
+/* 3. Style Pas Disorot Mouse (Hover) */
+.nav-pills .nav-item a:hover {
+    color: var(--primary) !important; /* Teks jadi biru pas disentuh */
+}
+
+/* 4. Benerin Teks h6 di dalamnya biar sinkron */
+.nav-pills .nav-item a h6 {
+    font-weight: 700; /* Teks tebal */
+    margin: 0;
+}
+
+/* Style Kartu Kategori */
+.cat-item {
+    display: block;
+    background: #ffffff;
+    border-radius: 20px; /* Sudut tumpul biar lucu */
+    padding: 30px;
+    text-align: center; /* Teks rata tengah biar rapi */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Bayangan tipis */
+    border: 1px solid #f0f2f5; /* Garis pinggir halus */
+    transition: all 0.3s ease; /* Animasi halus */
+}
+
+/* Style Ikon (Biar ada lingkaran di belakangnya) */
+.cat-item i {
+    width: 80px;
+    height: 80px;
+    line-height: 80px; /* Biar ikon pas di tengah lingkaran */
+    background-color: rgba(60, 70, 123, 0.1); /* Warna Biru Transparan */
+    color: var(--primary) !important; /* Warna Ikon Biru Tua */
+    border-radius: 50%; /* Jadi Lingkaran Penuh */
+    font-size: 32px; /* Ukuran Ikon */
+    margin-bottom: 20px; /* Jarak ke tulisan */
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Judul Kategori */
+.cat-item h6 {
+    font-weight: 800; /* Lebih tebal */
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1E2A39;
+}
+
+/* Teks Jumlah Lowongan */
+.cat-item p {
+    color: #888; /* Abu-abu soft */
+    font-size: 14px;
+}
+
+/* --- EFEK HOVER (Pas Mouse Nempel) --- */
+.cat-item:hover {
+    background: var(--primary); /* Kartu jadi Biru Tua */
+    transform: translateY(-10px); /* Naik ke atas dikit */
+    box-shadow: 0 15px 30px rgba(60, 70, 123, 0.3); /* Bayangan makin tebal */
+    border-color: transparent;
+}
+
+.cat-item:hover i {
+    background-color: #ffffff; /* Lingkaran jadi Putih */
+    color: var(--primary) !important; /* Ikon tetap Biru */
+    transform: scale(1.1); /* Ikon membesar dikit */
+}
+
+.cat-item:hover h6,
+.cat-item:hover p {
+    color: #ffffff !important; /* Teks jadi Putih semua */
+}
+
+/*** Job Listing ***/
+/* --- MODERN JOB CARD DESIGN (Fixed) --- */
+
+/* 1. Kartu Lowongan Utama */
+.job-item {
+    background: #ffffff !important; /* Pastikan background putih bersih */
+    border: 1px solid #f0f2f5 !important; /* Garis pinggir tipis banget */
+    border-radius: 25px !important; /* Sudut TUMPUL banget (25px) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important; /* Bayangan halus */
+    padding: 30px !important;
+    margin-bottom: 25px; /* Jarak antar kartu */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek pas mouse nempel (Terbang dikit) */
+.job-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 40px rgba(60, 70, 123, 0.15) !important;
+    border-color: transparent !important;
+}
+
+/* 2. Logo Perusahaan (Kiri) */
+.job-item img {
+    background: #fff;
+    border: 1px solid #eee !important;
+    border-radius: 15px !important; /* Logo juga tumpul */
+    padding: 5px;
+}
+
+/* 3. Badge Info (Lokasi, Waktu, Gaji) - INI KUNCINYA */
+/* Mengubah text biasa jadi "Kapsul" biru muda */
+.job-item .text-start span, 
+.job-badge { 
+    display: inline-block;
+    background-color: #effdf5; /* Warna dasar hijau muda/biru muda */
+    color: var(--primary) !important;
+    padding: 6px 15px;
+    border-radius: 50px; /* Bentuk Kapsul */
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(60, 70, 123, 0.1);
+}
+
+/* Pas hover, badge jadi biru tua */
+.job-item:hover .text-start span,
+.job-item:hover .text-start span .fa,
+.job-item:hover .text-start span .far,
+.job-item:hover .job-badge {
+    background-color: var(--primary);
+    color: #fff !important;
+    border-color: var(--primary);
+}
+
+/* 4. Judul Pekerjaan */
+.job-item h5 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1E2A39;
+}
+
+/* 5. Tombol Selengkapnya & Love */
+.job-item .btn-primary {
+    border-radius: 50px !important;
+    padding: 8px 25px;
+    font-size: 14px;
+}
+.job-item .btn-square {
+    border-radius: 50% !important; /* Bulat sempurna */
+    background-color: #f8f9fa;
+    border: none;
+}
+
+.text-start p {
+    margin-bottom: 40px;
+}
+
+/*** Testimonial ***/
+/* --- 4. MODERN TESTIMONIAL CARD --- */
+
+.testimonial-item {
+    background: #ffffff !important; /* Putih bersih */
+    border-radius: 25px !important; /* Sudut tumpul */
+    padding: 35px !important; /* Padding lega */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important; /* Bayangan halus */
+    border: 1px solid #f0f2f5; /* Garis tipis */
+    margin: 10px; /* Jarak aman biar shadow gak kepotong */
+    transition: all 0.3s ease;
+}
+
+/* Efek Hover */
+.testimonial-item:hover {
+    transform: translateY(-5px); /* Naik dikit */
+    box-shadow: 0 15px 35px rgba(60, 70, 123, 0.1) !important;
+    border-color: var(--secondary); /* Garis pinggir biru muda */
+}
+
+/* Ikon Kutipan (Quote) */
+.testimonial-item i {
+    color: rgba(60, 70, 123, 0.15) !important; /* Biru sangat pudar (Estetik) */
+    font-size: 40px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Teks Isi Testimoni */
+.testimonial-item p {
+    font-size: 16px;
+    color: #555;
+    font-style: italic; /* Miring biar kayak kutipan beneran */
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Foto User */
+.testimonial-item img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50%; /* Bulat penuh */
+    border: 3px solid #fff; /* Frame putih */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Bayangan di foto */
+}
+
+/* Nama & Jabatan */
+.testimonial-item h5 {
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 3px;
+}
+.testimonial-item small {
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 2px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+    border-color: var(--light);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+
+.footer .form-control {
+    border-color: rgba(255,255,255,0.5);
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+.footer-link {
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-link:hover {
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+/* --- COMPANY CARD DESIGN --- */
+
+.company-item {
+    background: #ffffff;
+    border: 1px solid #f0f2f5;
+    border-radius: 25px !important; /* Sudut TUMPUL */
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek Hover: Naik dan Bayangan Biru */
+.company-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(60, 70, 123, 0.15);
+    border-color: var(--secondary);
+}
+
+/* Logo Perusahaan (Bulat Besar di Tengah) */
+.company-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 20px; /* Rounded kotak */
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Nama Perusahaan */
+.company-item h5 {
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+/* Jenis Industri & Lokasi (Teks kecil) */
+.company-item .company-meta {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Badge Jumlah Lowongan */
+.vacancy-badge {
+    background-color: #effdf5; /* Hijau/Biru muda lembut */
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Tombol Lihat Profil */
+.btn-company {
+    background-color: #f8f9fa;
+    color: var(--primary);
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: 0.3s;
+    width: 100%;
+    display: block;
+}
+
+.company-item:hover .btn-company {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* --- FEATURE / WHY US SECTION --- */
+.feature-item {
+    background: #ffffff;
+    border-radius: 25px !important; /* Tumpul banget */
+    padding: 30px;
+    transition: .3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #f0f2f5;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px); /* Naik ke atas */
+    box-shadow: 0 15px 30px rgba(60, 70, 123, 0.15);
+    border-color: var(--secondary);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(60, 70, 123, 0.1); /* Biru muda transparan */
+    border-radius: 50%; /* Bulat */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto; /* Tengah */
+    color: var(--primary);
+    font-size: 28px;
+    transition: .3s;
+}
+
+.feature-item:hover .feature-icon {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* --- CONTACT PAGE STYLES --- */
+
+/* 1. Input Form di Contact (Biar Rounded) */
+.contact-form .form-control {
+    height: 55px;
+    border-radius: 50px !important; /* Kapsul */
+    border: 1px solid #eee;
+    padding-left: 20px;
+    background-color: #f9f9f9; /* Agak abu dikit biar beda sama background kartu */
+}
+
+.contact-form .form-control:focus {
+    background-color: #fff;
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+/* 2. Khusus Textarea (Kotak Pesan) - Sudutnya beda */
+.contact-form textarea.form-control {
+    height: 150px;
+    border-radius: 25px !important; /* Tumpul aja, jangan kapsul */
+    padding-top: 20px;
+}
+
+/* 3. Item Info Kontak (Alamat, Email, dll) */
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-info-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(60, 70, 123, 0.1); /* Biru transparan */
+    color: var(--primary);
+    border-radius: 50%; /* Bulat */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-right: 20px;
+    transition: .3s;
+}
+
+.contact-info-item:hover .contact-info-icon {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* --- BLOG / TIPS CARD STYLE --- */
+
+.blog-item {
+    background: #ffffff;
+    border-radius: 25px !important; /* Sudut Tumpul */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f2f5;
+    overflow: hidden; /* Biar gambar gak keluar jalur */
+    transition: .3s;
+    height: 100%; /* Biar tinggi kartu rata */
+}
+
+.blog-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(60, 70, 123, 0.15);
+    border-color: var(--secondary);
+}
+
+/* Gambar Blog */
+.blog-img {
+    position: relative;
+    overflow: hidden;
+    height: 220px; /* Tinggi gambar fix */
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+/* Efek Zoom Gambar pas Hover */
+.blog-item:hover .blog-img img {
+    transform: scale(1.1);
+}
+
+/* Badge Kategori di atas gambar */
+.blog-cat {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Judul Artikel */
+.blog-item h5 {
+    font-weight: 800;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+
+.blog-item:hover h5 {
+    color: var(--secondary); /* Judul jadi biru muda pas hover */
+}
+
+/* Tombol Baca */
+.btn-read-more {
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
+.btn-read-more:hover {
+    color: var(--secondary);
+    letter-spacing: 1px; /* Huruf jadi renggang dikit */
+}
+
+/* --- AUTH PAGES (CLEAN CENTERED STYLE) --- */
+
+/* =========================================
+   🔐 FIX HALAMAN LOGIN (BIAR RAPI & TENGAH)
+   ========================================= */
+
+/* 1. Container Utama (Background Titik-titik) */
+.auth-section {
+    min-height: 100vh; /* Tinggi full layar */
+    display: flex;
+    align-items: center; /* Tengah vertikal */
+    justify-content: center; /* Tengah horizontal */
+    padding: 60px 40px; /* Jarak aman biar gak mepet tepi */
+    background-color: #F6F7FC; /* Abu muda soft */
+}
+
+/* 2. Kartu Login (Kotak Putih) */
+.auth-card {
+    background: #ffffff;
+    border-radius: 30px; /* Sudut tumpul */
+    box-shadow: 0 20px 60px rgba(60, 70, 123, 0.1); /* Bayangan soft */
+    border: none;
+    padding: 40px 35px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Garis Warna di Atas Kartu (Hiasan) */
+.auth-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 6px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+/* 3. Judul Login */
+.auth-header h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+/* 4. Input Form */
+.auth-form label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 8px;
+    margin-left: 15px; /* Geser label biar sejajar input rounded */
+    display: block;
+}
+
+.auth-form .form-control {
+    height: 55px;
+    border-radius: 50px; /* Kapsul */
+    padding-left: 25px;
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    font-size: 15px;
+    margin-bottom: 20px; /* Jarak antar input */
+    box-shadow: none;
+}
+
+.auth-form .form-control:focus {
+    background-color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(60, 70, 123, 0.1);
+}
+
+/* 5. Tombol Login */
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    transition: .3s;
+}
+.btn-primary:hover {
+    background-color: #2B3565; /* Warna lebih gelap pas hover */
+    transform: translateY(-2px);
+}
+
+/* 6. Checkbox & Link */
+.form-check-input {
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+/* Link Switch */
+.switch-link {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+.switch-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   PROFILE PAGE STYLES (SPACIOUS & LEGA)
+   ========================================= */
+
+/* 1. Jarak Antar Kartu Vertikal (PENTING!) */
+.profile-card {
+    background: #fff;
+    border-radius: 25px !important; 
+    box-shadow: 0 10px 30px rgba(60, 70, 123, 0.05);
+    border: 1px solid #f0f2f5;
+    overflow: hidden;
+    margin-bottom: 30px !important; 
+}
+
+/* 2. Sidebar Foto */
+.profile-img-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f8f9fa;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 3. Info List Sidebar */
+.profile-info-list li {
+    display: flex;
+    align-items: center;
+    padding: 15px 0; /* Jarak antar item list */
+    border-bottom: 1px solid #f9f9f9;
+    color: #555;
+    font-size: 14px;
+}
+.profile-info-list i {
+    width: 30px;
+    color: var(--primary);
+}
+
+/* 4. Badge Skill */
+.skill-badge {
+    display: inline-block;
+    background: #effdf5; /* Warna hijau muda lembut */
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(60, 70, 123, 0.1);
+}
+
+/* 5. Project Card */
+.project-mini-card {
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: .3s;
+}
+.project-mini-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+/* 6. Fix Judul Section */
+.profile-card h5 {
+    margin-bottom: 20px !important; /* Jarak judul ke konten */
+}
+
+/* --- EMPTY STATE (KOTAK KOSONG MINTA DIISI) --- */
+
+.empty-state {
+    border: 2px dashed #dce0e8; /* Garis putus-putus */
+    background-color: #fcfcfc;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Biar tinggi ngisi penuh */
+}
+
+/* Pas disorot, garisnya jadi biru */
+.empty-state:hover {
+    border-color: var(--primary);
+    background-color: #f0f7ff; /* Biru sangat muda */
+    transform: translateY(-5px);
+}
+
+/* Ikon di dalam kotak kosong */
+.empty-state-icon {
+    font-size: 30px;
+    color: #cbd0d6;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+
+.empty-state:hover .empty-state-icon {
+    color: var(--primary);
+}
+
+/* Tombol kecil di dalam empty state */
+.btn-add-data {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+/* --- SAVED JOBS STYLE --- */
+
+/* Tombol Hapus (Merah Soft) */
+.btn-delete {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    background-color: #fff0f0; /* Merah sangat muda */
+    color: #dc3545; /* Merah */
+    border: 1px solid #ffecec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.btn-delete:hover {
+    background-color: #dc3545;
+    color: #fff;
+    transform: rotate(90deg); /* Efek putar dikit pas hover */
+}
+
+/* Badge Tanggal Simpan */
+.saved-date {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    display: block;
+    margin-top: 5px;
+}
+
+/* --- STATUS BADGE (BUAT TAB LAMARAN) --- */
+
+.status-badge {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+/* Warna-warni Status */
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.status-interview {
+    background-color: #cff4fc;
+    color: #055160;
+    border: 1px solid #b6effb;
+}
+
+.status-rejected {
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c6cb;
+}
+
+.status-accepted {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+/* --- PRICING TABLE --- */
+.pricing-item {
+    background: #ffffff;
+    border-radius: 25px !important;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #f0f2f5;
+    transition: .3s;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(60, 70, 123, 0.15);
+    border-color: var(--primary);
+}
+
+.pricing-item.recommended {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.05); /* Lebih gede dikit */
+    border: none;
+}
+
+.pricing-item.recommended h5, 
+.pricing-item.recommended small,
+.pricing-item.recommended p {
+    color: #fff !important;
+}
+
+.pricing-item.recommended .btn {
+    background: #fff;
+    color: var(--primary);
+}
+
+/* --- APPLICANT CARD (KARTU PELAMAR) --- */
+.applicant-card {
+    background: #fff;
+    border-radius: 20px !important;
+    padding: 25px;
+    border: 1px solid #eee;
+    transition: .3s;
+}
+.applicant-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.applicant-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f8f9fa;
+}
+
+/* --- MODERN FORM POST JOB --- */
+
+/* 1. Section Header (Judul per Bagian) */
+.section-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f2f5;
+}
+.section-title i {
+    background: rgba(60, 70, 123, 0.1);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* 2. Input Gaji Premium (Input Group) */
+.salary-input-group .input-group-text {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 600;
+}
+.salary-input-group .form-control {
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+/* Rounding Kiri Kanan Biar Nyatu */
+.salary-input-group .start-radius {
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+}
+.salary-input-group .end-radius {
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+}
+
+/* 3. Upload Area (Dropzone Style) */
+.upload-zone {
+    border: 2px dashed #dce0e8;
+    background-color: #fcfcfc;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    transition: .3s;
+    cursor: pointer;
+}
+.upload-zone:hover {
+    background-color: #f0f7ff;
+    border-color: var(--primary);
+}
+.upload-zone input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Sembunyikan input asli */
+    cursor: pointer;
+}
+.upload-icon {
+    font-size: 40px;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+/* --- ADMIN DASHBOARD LAYOUT --- */
+
+/* Layout Utama: Sidebar Kiri + Konten Kanan */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #F6F7FC; /* Abu muda */
+}
+
+/* 1. Sidebar (Menu Kiri) */
+/* --- SIDEBAR ADMIN (FIX SCROLL) --- */
+
+.sidebar {
+    width: 260px;
+    background-color: var(--primary); /* Biru Tua */
+    color: #fff;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full tinggi layar */
+    z-index: 1000;
+    transition: .3s;
+    
+    /* INI SOLUSINYA: Biar bisa discroll kalau menu kepanjangan */
+    overflow-y: auto; 
+}
+
+/* Custom Scrollbar Sidebar (Biar tipis & rapi) */
+.sidebar::-webkit-scrollbar {
+    width: 6px; /* Lebar scrollbar tipis */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent; /* Track bening */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2); /* Scrollbar putih transparan */
+    border-radius: 20px; /* Tumpul */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Lebih terang pas disorot */
+}
+
+/* Header Brand di Sidebar */
+.sidebar-brand {
+    padding: 25px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: sticky; /* Biar logo tetep nempel di atas pas discroll */
+    top: 0;
+    background-color: var(--primary); /* Tutup background biar gak transparan */
+    z-index: 10;
+}
+
+/* Menu Items */
+.sidebar-menu {
+    padding: 20px 15px;
+    list-style: none;
+    padding-bottom: 50px; /* Kasih jarak bawah biar menu 'Keluar' gak mepet banget */
+}
+
+.sidebar-menu li {
+    margin-bottom: 5px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    color: rgba(255,255,255,0.7);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: .3s;
+    font-weight: 500;
+}
+
+.sidebar-menu a:hover, .sidebar-menu a.active {
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.sidebar-menu i {
+    width: 25px;
+    margin-right: 10px;
+}
+
+/* --- SIDEBAR ACTIVE STATE (EFEK NYALA) --- */
+
+/* Tampilan tombol pas Aktif */
+.sidebar-menu a.active {
+    background-color: rgba(255, 255, 255, 0.2) !important; /* Latar putih transparan */
+    color: #ffffff !important; /* Teks putih terang */
+    font-weight: 700 !important; /* Teks jadi tebal */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan biar timbul */
+    border-left: 4px solid #ffffff; /* Garis penegas di kiri */
+    border-radius: 10px; /* Radius sedikit kotak biar beda sama rounded biasa */
+}
+
+/* Ikon pas aktif juga jadi lebih terang */
+.sidebar-menu a.active i {
+    color: #fff;
+    transform: scale(1.1); /* Ikon membesar dikit */
+}
+
+/* 2. Main Content (Area Kerja Kanan) */
+.admin-content {
+    flex-grow: 1;
+    margin-left: 260px; /* Geser kanan sebesar lebar sidebar */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Topbar (Header Putih di Atas) */
+.admin-topbar {
+    background: #fff;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Area Isi (Tabel dll) */
+.admin-body {
+    padding: 30px;
+}
+
+/* 3. Dashboard Cards (Statistik) */
+.stat-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    border: 1px solid #eee;
+    transition: .3s;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+/* Warna-warni icon */
+.bg-blue-soft { background: #e3f2fd; color: #0d6efd; }
+.bg-green-soft { background: #d1e7dd; color: #0f5132; }
+.bg-yellow-soft { background: #fff3cd; color: #856404; }
+.bg-red-soft { background: #f8d7da; color: #842029; }
+
+/* 4. Tabel Admin Modern */
+.table-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 25px;
+    border: 1px solid #eee;
+}
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #eee;
+    color: #666;
+    font-weight: 700;
+    padding: 15px;
+}
+.table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.page-header {
+    /* Placeholder gambar perusahaan sebagai background */
+    background: linear-gradient(rgba(60, 70, 123, 0.8), rgba(60, 70, 123, 0.9)), url('../img/carousel-1.jpg') center center no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 0 50px 50px; /* Lengkung bawah yang lucu */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Kartu Utama yang Rounded & Soft */
+.detail-card {
+    background: #ffffff;
+    border-radius: 25px !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid #f0f2f5 !important;
+    padding: 40px;
+    margin-bottom: 30px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(60, 70, 123, 0.15) !important;
+}
+
+/* Logo Perusahaan Besar */
+.company-logo-large {
+    width: 140px;
+    height: 140px;
+    border-radius: 30px; /* Squircle */
+    object-fit: contain;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+/* Badge Kategori/Info Kecil */
+.company-badge {
+    display: inline-block;
+    background-color: #effdf5;
+    color: var(--primary) !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(60, 70, 123, 0.1);
+    transition: .3s;
+}
+
+.detail-card:hover .company-badge {
+    background-color: var(--primary);
+    color: #fff !important;
+}
+
+/* Judul Section di dalam kartu */
+.section-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f2f5;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: var(--primary);
+}
+
+/* Info Box di Sidebar (Kontak) */
+.info-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.info-box:hover {
+    background: #fff;
+    border-color: var(--primary);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(60, 70, 123, 0.1);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.info-box:hover .info-icon {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* --- JOB DETAIL SPECIFIC STYLES --- */
+
+/* Gambar Poster Lowongan (Banner di dalam kartu) */
+.job-poster-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Batasi tinggi biar gak kegedean */
+    object-fit: cover;
+    border-radius: 20px; /* Rounded */
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Kotak Gaji (Highlight) */
+.salary-box {
+    background: linear-gradient(135deg, #effdf5 0%, #d1e7dd 100%); /* Hijau Uang Soft */
+    color: #0f5132;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.1);
+}
+
+/* List Kualifikasi (Checklist Style) */
+.qualification-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    color: #666;
+}
+.qualification-list li::before {
+    content: "\f00c"; /* FontAwesome Check */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--primary);
+    background: rgba(60, 70, 123, 0.1);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+/* =================================================
+   📱 MOBILE MENU: SLIDE FROM RIGHT (OFF-CANVAS STYLE)
+   ================================================= */
+
+@media (max-width: 991px) {
+    
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Sembunyi di kanan layar */
+        width: 80%; /* Lebar menu 80% dari layar HP */
+        max-width: 300px;
+        height: 100vh; /* Full tinggi layar */
+        background-color: #ffffff;
+        z-index: 9999; /* Paling atas */
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animasi smooth */
+        padding: 20px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        display: block !important; /* Paksa display block biar transisi jalan */
+        visibility: hidden; /* Sembunyikan visualnya dulu */
+        overflow-y: auto;
+    }
+
+    /* 2. Class Khusus saat Menu Dibuka (Ditambah via JS/Bootstrap) */
+    .navbar-collapse.show {
+        right: 0; /* Geser masuk ke layar */
+        visibility: visible;
+    }
+
+    /* 3. Styling Item Menu di Mobile */
+    .navbar-nav {
+        margin-top: 40px; /* Jarak dari atas */
+    }
+    
+    .navbar-nav .nav-link {
+        color: var(--dark) !important;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* 4. Tombol Login/Daftar di Mobile */
+    .navbar .d-none.d-lg-flex {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .navbar .btn {
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    /* 5. LAYAR HITAM (BACKDROP) */
+    /* Ini trik biar background belakang jadi gelap pas menu buka */
+    .navbar-collapse::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        /* Geser backdrop biar gak nutupin menu itu sendiri */
+        transform: translateX(100%); 
+    }
+
+    /* Munculkan backdrop pas menu show */
+    .navbar-collapse.show::before {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-100vw); /* Geser backdrop ke kiri menutupi layar */
+    }
+    
+    /* Tambahan: Tombol Close (X) buatan sendiri di pojok menu */
+    .navbar-collapse::after {
+        content: "\f00d"; /* FontAwesome 'X' icon */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: #aaa;
+        cursor: pointer;
+    }
+}
+
+/* --- FIX FONT MENU DESKTOP (NO CAPS) --- */
+@media (min-width: 992px) {
+    .navbar-light .navbar-nav .nav-link {
+        text-transform: capitalize !important; /* Huruf besar awal kata aja */
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        letter-spacing: normal !important;
+    }
+    
+    /* Dropdown anak menu */
+    .dropdown-item {
+        text-transform: capitalize !important;
+        font-size: 14px;
+    }
+}
+
+.navbar.sticky-top {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1050 !important;
+}
+
+@media (max-width: 768px) {
+    
+    /* 1. UMPETIN CAROUSEL/BANNER GEDE */
+    .header-carousel, 
+    .page-header {
+        display: none !important; /* Hilang total di HP */
+    }
+
+    /* 2. NAVIGASI JADI STATIS (Biar gak nempel-nempel di atas) */
+    .navbar {
+        position: relative !important;
+        top: 0 !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    }
+
+    /* 3. ATUR SEARCH BAR BIAR LANGSUNG MUNCUL DI ATAS */
+    #search-section {
+        margin-top: 20px !important; /* Kasih jarak dikit dari navbar */
+        padding-top: 0 !important;
+        background: transparent !important;
+    }
+
+    /* 4. TAMBAH JUDUL KECIL "CARI KERJA" (Opsional - via CSS) */
+    /* Ini trik buat nampilin teks pengganti banner */
+    #search-section::before {
+        content: "Temukan Karir Impianmu";
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+}
+
+/* =================================================
+   📱 FIX TAB FILTER MOBILE (1 BARIS & GARIS PENDEK)
+   ================================================= */
+
+@media (max-width: 576px) {
+    
+    /* 1. Wadah Tab */
+    .nav-pills.d-inline-flex {
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center;
+        flex-wrap: nowrap !important; /* DILARANG turun baris */
+        border-bottom: 1px solid #eee; /* Garis tipis panjang di paling bawah container */
+        padding-bottom: 0 !important;
+    }
+
+    /* 2. Item Tab */
+    .nav-pills .nav-item {
+        flex: 1; /* Bagi rata 3 kolom */
+        text-align: center;
+    }
+
+    /* 3. Teks Link */
+    .nav-pills .nav-link {
+        width: 100% !important;
+        padding: 10px 0 !important; /* Padding atas bawah aja */
+        font-size: 12px !important; /* Ukuran font pas */
+        white-space: nowrap !important; /* KUNCI: Paksa teks "Kanan Kiri" (Gak boleh turun) */
+        background: transparent !important;
+        color: #888;
+        border-radius: 0 !important; /* Kotak aja biar rapi bawahnya */
+        border-bottom: none !important; /* Hapus border bawaan yg panjang */
+        position: relative; /* Penting buat naruh garis pendek */
+    }
+
+    /* 4. GARIS BAWAH PENDEK (CUSTOM) */
+    /* Ini trik bikin garisnya kecil di tengah */
+    .nav-pills .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0; /* Tempel di bawah */
+        left: 50%;
+        transform: translateX(-50%); /* Pas di tengah-tengah */
+        width: 20px; /* PANJANG GARIS CUMA 20px */
+        height: 3px; /* Ketebalan garis */
+        background-color: var(--primary); /* Warna Biru */
+        border-radius: 10px 10px 0 0; /* Lengkung dikit atasnya */
+    }
+
+    /* Warna teks pas aktif */
+    .nav-pills .nav-link.active {
+        color: var(--primary) !important;
+        background-color: transparent !important;
+    }
+}
+
+/* MODE HP: Drop filter ke bawah judul */
+@media (max-width: 768px) {
+    .filter-wrapper {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .filter-wrapper select {
+        width: 100% !important;
+    }
+
+    .candidate-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+}
+
+/* HP: matikan owl carousel, jadi vertical */
+@media (max-width: 768px) {
+    .owl-carousel {
+        display: block !important;
+    }
+
+    .owl-carousel .owl-stage-outer,
+    .owl-carousel .owl-stage,
+    .owl-carousel .owl-item {
+        width: 100% !important;
+        transform: none !important;
+    }
+
+    .owl-carousel .owl-item {
+        display: block !important;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media Query untuk Layar HP (Max-width 768px) */
+@media (max-width: 768px) {
+    
+    /* 1. Sembunyikan Hero Carousel Sepenuhnya */
+    .header-carousel, 
+    .owl-carousel-item {
+        display: none !important;
+    }
+
+    /* 2. Reset Container Carousel agar tidak memakan tempat */
+    .container-fluid.p-0.mb-5 {
+        margin-bottom: 0 !important; /* Hilangkan margin bawah container carousel */
+        padding-bottom: 0 !important;
+        height: 0 !important; /* Pastikan tingginya 0 */
+        overflow: hidden; /* Sembunyikan apapun yang meluap */
+    }
+
+    /* 4. Penyesuaian Navbar (Jika perlu) */
+    .navbar {
+        margin-bottom: 0 !important;
+    }
+    
+    /* 5. Perbaiki Hero Overlay jika masih muncul */
+    .hero-overlay {
+        display: none !important;
+    }
+}
